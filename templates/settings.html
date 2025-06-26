@@ -1,18 +1,17 @@
 {{define "body"}}
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     <div class="row">
-        <h1 class="page-header">Settings</h1>
+        <h1 class="page-header">设置</h1>
     </div>
     <div id="flashes" class="row"></div>
     {{template "flashes" .Flashes}}
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
         <li class="active" role="mainSettings"><a href="#mainSettings" aria-controls="mainSettings" role="tab"
-                data-toggle="tab">Account Settings</a></li>
-        <li role="uiSettings"><a href="#uiSettings" aria-controls="uiSettings" role="tab" data-toggle="tab">UI
-                Settings</a></li>
+                data-toggle="tab">帐户设置</a></li>
+        <li role="uiSettings"><a href="#uiSettings" aria-controls="uiSettings" role="tab" data-toggle="tab">界面设置</a></li>
         <li role="reportingSettings"><a href="#reportingSettings" aria-controls="reportingSettings" role="tab" id="reporttab"
-            data-toggle="tab">Reporting Settings</a></li>
+            data-toggle="tab">报告设置</a></li>
     </ul>
     <!-- Tab Panes -->
     <div class="tab-content">
@@ -20,7 +19,7 @@
             <br />
             {{if .ModifySystem }}
             <div class="row">
-                <label class="col-sm-2 control-label form-label">Gophish version</label>
+                <label class="col-sm-2 control-label form-label">Gophish 版本</label>
                 <div class="col-md-6">
                     <label class="form-label">{{.Version}}</label>
                 </div>
@@ -34,14 +33,14 @@
                         class="form-control" readonly />
                 </div>
                 <form id="apiResetForm">
-                    <button class="btn btn-primary"><i class="fa fa-refresh" type="submit"></i> Reset</button>
+                    <button class="btn btn-primary"><i class="fa fa-refresh" type="submit"></i> 重置</button>
                     <input type="hidden" name="csrf_token" value="{{.Token}}" />
                 </form>
             </div>
             <br />
             <form id="settingsForm">
                 <div class="row">
-                    <label for="username" class="col-sm-2 control-label form-label">Username:</label>
+                    <label for="username" class="col-sm-2 control-label form-label">用户名:</label>
                     <div class="col-md-6">
                         <input type="text" id="username" name="username" value="{{.User.Username}}"
                             class="form-control" />
@@ -49,7 +48,7 @@
                 </div>
                 <br />
                 <div class="row">
-                    <label for="current_password" class="col-sm-2 control-label form-label">Old Password:</label>
+                    <label for="current_password" class="col-sm-2 control-label form-label">旧密码:</label>
                     <div class="col-md-6">
                         <input type="password" id="current_password" name="current_password" autocomplete="off"
                             class="form-control" />
@@ -57,7 +56,7 @@
                 </div>
                 <br />
                 <div class="row">
-                    <label for="new_password" class="col-sm-2 control-label form-label">New Password:</label>
+                    <label for="new_password" class="col-sm-2 control-label form-label">新密码:</label>
                     <div class="col-md-6">
                         <input type="password" id="password" name="new_password" autocomplete="new-password"
                             class="form-control" />
@@ -72,8 +71,7 @@
                 </div>
                 <br />
                 <div class="row">
-                    <label for="confirm_new_password" class="col-sm-2 control-label form-label">Confirm New
-                        Password:</label>
+                    <label for="confirm_new_password" class="col-sm-2 control-label form-label">确认新密码:</label>
                     <div class="col-md-6">
                         <input type="password" id="confirm_new_password" name="confirm_new_password" autocomplete="off"
                             class="form-control" />
@@ -81,7 +79,7 @@
                 </div>
                 <input type="hidden" name="csrf_token" value="{{.Token}}" />
                 <br />
-                <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> Save</button>
+                <button class="btn btn-primary" type="submit"><i class="fa fa-save"></i> 保存</button>
             </form>
             <br />
         </div>
@@ -89,7 +87,7 @@
             <br />
             <div class="checkbox checkbox-primary">
                 <input id="use_map" type="checkbox">
-                <label for="use_map">Show campaign results map</label>
+                <label for="use_map">展示活动结果地图</label>
             </div>
         </div>
         <!-- Reporting Settings Begin -->
