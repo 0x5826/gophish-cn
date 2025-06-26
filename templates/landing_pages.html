@@ -1,12 +1,12 @@
 {{define "body"}}
 <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
     <h1 class="page-header">
-        Landing Pages
+        落地页面
     </h1>
     <div id="flashes" class="row"></div>
     <div class="row">
         <button type="button" class="btn btn-primary" onclick="edit(-1)" data-toggle="modal" data-backdrop="static"
-            data-target="#modal"><i class="fa fa-plus"></i> New Page</button>
+            data-target="#modal"><i class="fa fa-plus"></i> 新页面</button>
     </div>
     &nbsp;
     <div id="loading">
@@ -14,15 +14,15 @@
     </div>
     <div id="emptyMessage" class="row" style="display:none;">
         <div class="alert alert-info">
-            No pages created yet. Let's create one!
+            当前无页面. 请创建一个!
         </div>
     </div>
     <div class="row">
         <table id="pagesTable" class="table" style="display:none;">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Last Modified Date</th>
+                    <th>名称</th>
+                    <th>上次修改时间</th>
                     <th class="col-md-2 no-sort"></th>
                 </tr>
             </thead>
